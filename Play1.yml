@@ -1,0 +1,13 @@
+- name: Play 1
+  hosts: dhcp1
+  tasks:
+  
+    - name: Set host name
+      ansible.builtin.hostname:
+        name: dhcp1
+        use: systemd
+        
+    - name: Apt update
+      ansible.builtin.apt:
+        update_chace: yes
+        upgrade: true
