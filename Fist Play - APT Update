@@ -1,7 +1,0 @@
--
-  name: Apt update
-  hosts: dhcp1
-  tasks:
-    - name: Update
-      ansible.builtin.apt:
-        update:_chace : yes
