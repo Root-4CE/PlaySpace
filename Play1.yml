@@ -1,5 +1,7 @@
 - name: Play 1
-  hosts: dhcp1
+  hosts: all
+  become: yes
+
   tasks:
   
     - name: Set host name
@@ -8,6 +10,5 @@
         use: systemd
         
     - name: Apt update
-      ansible.builtin.apt:
-        update_chace: yes
-        upgrade: true
+      shell:
+        cmd: apt update && apt upgrade
