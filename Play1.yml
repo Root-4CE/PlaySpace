@@ -17,3 +17,11 @@
     - name: Upgrade
       apt:
         upgrade: dist 
+
+    - name: Create User ansible
+      ansible.builtin.user:
+        name: ansible
+        groups: sudo
+        shell: /sbin/nologin
+        
+         
