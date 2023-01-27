@@ -7,3 +7,7 @@
     - name: Present
       ansible.builtin.debug:
         msg: "I'm alive!"
+  
+    - name: Update
+      package:
+        state: latest
