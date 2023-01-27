@@ -21,7 +21,7 @@
     - name: Create User ansible
       ansible.builtin.user:
         name: ansible
-        password: '!'
+        password: qwe
         create_home: false
         groups: sudo
         shell: /sbin/nologin
