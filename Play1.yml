@@ -22,7 +22,7 @@
       ansible.builtin.user:
         name: ansible
         create_home: false
-        groups: sudo, ansible
+        groups: sudo
         shell: /sbin/nologin
         state: present
          
