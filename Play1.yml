@@ -1,14 +1,9 @@
 - name: Play 1
-  hosts: all
-  become: yes
+  hosts: localhost
+#  become: yes
 
   tasks:
   
-    - name: Set host name
-      ansible.builtin.hostname:
-        name: dhcp1
-        use: systemd
-        
-    - name: Apt update
-      shell:
-        cmd: apt update && apt upgrade
+    - name: Present
+      ansible.builtin.debug:
+        msg: "I"m alive!
