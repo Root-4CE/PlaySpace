@@ -21,7 +21,8 @@
     - name: Create User ansible
       ansible.builtin.user:
         name: ansible
+        group: ansible
         groups: sudo
         shell: /sbin/nologin
-        
+
          
