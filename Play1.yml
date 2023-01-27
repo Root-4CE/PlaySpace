@@ -24,6 +24,6 @@
         password: '*'
         create_home: false
         groups: sudo
-        shell: /bin/bash
+        shell: /sbin/nologin
         state: present
          
