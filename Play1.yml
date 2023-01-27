@@ -9,9 +9,10 @@
         msg: "I'm alive!"
   
     - name: Update
-      package:
+      apt:
+        name: "*"
         state: latest
     
     - name: Upgrade
-      package:
+      apt:
         upgrade: dist 
