@@ -1,8 +1,7 @@
 - name: Play 1
   hosts: localhost
   become: yes
-  become_method: su
-  become_user: supervisor
+  #become_user: supervisor
 
   tasks:
   
