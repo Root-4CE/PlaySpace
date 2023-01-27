@@ -11,3 +11,7 @@
     - name: Update
       package:
         state: latest
+    
+    - name: Upgrade
+      package:
+        upgrade: dist 
