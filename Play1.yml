@@ -22,7 +22,7 @@
       ansible.builtin.user:
         name: ansible
         group: ansible
-        groups: sudo
+        groups: sudo, ansible
         shell: /sbin/nologin
 
          
