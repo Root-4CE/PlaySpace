@@ -23,7 +23,7 @@
       ansible.builtin.iptables:
         chain: "{{ item }}"
         policy: drop
-      with_items: [ 'INPUT', 'OUTPUT', 'FORWARD' ]
+      with_items: [ 'INPUT', 'FORWARD', 'OUTPUT', ]
       
     - name: iptables - ssh INPUT true
       ansible.builtin.iptables:    
