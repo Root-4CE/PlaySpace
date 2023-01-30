@@ -1,8 +1,9 @@
 - name: Settings for routers
   hosts: router
   become: yes
-  #become_method: sudo
-
+  become_method: su
+  become_user: supervisor
+  
   tasks:
 
     - name: iptables - FILTER policy (open the doors)
