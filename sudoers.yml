@@ -1,0 +1,13 @@
+---
+  - name: SUDOERS
+    hosts: localhost, all 
+    become: yes
+
+    tasks:
+      
+      - name: change sudoers conf
+        lineinfile:
+          path: /etc/sudoers.d/supervisor
+          line: 'supervisor ALL=(ALL:ALL) NOPASSWD:ALL'
+          create: yes
+          
