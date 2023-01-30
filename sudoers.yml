@@ -1,6 +1,6 @@
 ---
   - name: SUDOERS
-    hosts: localhost, all 
+    hosts: all 
     become: yes
 
     tasks:
