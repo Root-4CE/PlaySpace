@@ -19,12 +19,6 @@
         flush: yes
       with_items:  [ 'INPUT', 'FORWARD', 'OUTPUT' ]
 
-    - name: iptables - FILTER policy
-      ansible.builtin.iptables:
-        chain: "{{ item }}"
-        policy: DROP
-      with_items: [ 'INPUT', 'FORWARD', 'OUTPUT', ]
-      
     - name: iptables - ssh INPUT true
       ansible.builtin.iptables:    
         table: filter
@@ -56,3 +50,9 @@
         ctstate: NEW,ESTABLISHED,RELATED
         jump: MASQUERADE
         
+    - name: iptables - FILTER policy
+      ansible.builtin.iptables:
+        chain: "{{ item }}"
+        policy: DROP
+      with_items: [ 'INPUT', 'FORWARD', 'OUTPUT', ]
+          
