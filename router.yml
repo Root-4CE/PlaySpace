@@ -22,7 +22,7 @@
     - name: iptables - FILTER policy
       ansible.builtin.iptables:
         chain: "{{ item }}"
-        policy: drop
+        policy: DROP
       with_items: [ 'INPUT', 'FORWARD', 'OUTPUT', ]
       
     - name: iptables - ssh INPUT true
