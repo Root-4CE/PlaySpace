@@ -5,6 +5,12 @@
 
   tasks:
 
+    - name: iptables - FILTER policy (open the doors)
+      ansible.builtin.iptables:
+        chain: "{{ item }}"
+        policy: ACCEPT
+      with_items: [ 'INPUT', 'FORWARD', 'OUTPUT']
+
     - name: set ip forwarding = 1
       ansible.posix.sysctl:
         name: net.ipv4.ip_forward
@@ -50,7 +56,7 @@
         ctstate: NEW,ESTABLISHED,RELATED
         jump: MASQUERADE
         
-    - name: iptables - FILTER policy
+    - name: iptables - FILTER policy (close the doors)
       ansible.builtin.iptables:
         chain: "{{ item }}"
         policy: DROP
