@@ -60,5 +60,5 @@
       ansible.builtin.iptables:
         chain: "{{ item }}"
         policy: DROP
-      with_items: [ 'INPUT', 'OUTPUT' ]
+      with_items: [ 'INPUT', 'FORWARD' 'OUTPUT' ]
           
