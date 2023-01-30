@@ -40,7 +40,7 @@
         chain: OUTPUT
         protocol: tcp
         destination_port: 22
-        ctstate: NEW,ESTABLISHED,RELATED
+        #ctstate: NEW,ESTABLISHED,RELATED
         jump: ACCEPT
 
     - name: iptables - FORWARD
