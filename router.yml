@@ -1,7 +1,7 @@
 - name: Settings for routers
   hosts: router
-  #become: yes
-  #become_method: su
+  become: yes
+  become_method: sudo
   #become_user: supervisor
 
   tasks:
