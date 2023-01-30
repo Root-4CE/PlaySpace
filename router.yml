@@ -1,6 +1,7 @@
 - name: Play 1
   hosts: router
-  #become: yes
+  become: yes
+  #become_method: sudo
 
   tasks:
 
