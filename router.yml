@@ -1,6 +1,7 @@
 - name: Play 1
   hosts: router
-  
+  become: yes
+
   tasks:
 
     - name: set ip forwarding = 1
