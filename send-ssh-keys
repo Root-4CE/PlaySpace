@@ -3,7 +3,6 @@
   - name: Sending ssh keys
     hosts: all
     become: yes
-    become_user: supervisor
 
     tasks:
 
@@ -11,4 +10,4 @@
         authorized_key:
           user: supervisor
           state: present
-          key: "{{ lookup('file', 'supervisor@192.168.17.3:~/.ssh/id_rsa.pub') }}"
+          key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
