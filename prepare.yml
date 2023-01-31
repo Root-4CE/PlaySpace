@@ -10,7 +10,7 @@
           name: ansible
           password: 123qwe
           shell: /sbin/nologin
-          create_home: false
+          home: /ansible/
           state: present
 
       - name: upload ssh keys
