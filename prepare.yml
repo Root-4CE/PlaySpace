@@ -10,9 +10,9 @@
           state: present
           key: "{{ lookup('file', '/home/supervisor/.ssh/id_rsa.pub') }}"
 
-      - name: change sudoers
-        lineinfile:
-          path: /etc/sudoers.d/supervisor
-          line: 'supervisor ALL=(ALL:ALL) NOPASSWD:ALL'
-          #state: present
-          create: yes
+      # - name: change sudoers
+      #   lineinfile:
+      #     path: /etc/sudoers.d/supervisor
+      #     line: 'supervisor ALL=(ALL:ALL) NOPASSWD:ALL'
+      #     #state: present
+      #     create: yes
