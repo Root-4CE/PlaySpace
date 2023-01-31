@@ -26,3 +26,4 @@
           path: /etc/sudoers.d/ansible
           line: 'ansible ALL=(ALL:ALL) NOPASSWD:ALL'
           #state: present
+          create: yes
