@@ -7,13 +7,14 @@
 
     tasks:
           
-      # - name: create user ansible
-      #   user:
-      #     name: ansible
-      #     password: 123qwe
-      #     shell: /sbin/nologin
-      #     home: /ansible
-      #     state: present
+      - name: create user ansible
+        user:
+          name: ansible
+          password: 123qwe
+          groups: sudo
+          shell: /sbin/nologin
+          home: /ansible
+          state: present
 
       - name: upload ssh keys
         authorized_key:
