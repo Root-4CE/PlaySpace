@@ -4,11 +4,23 @@
     #become: yes
 
     tasks:
-      
+          
+      - name: create user ansible
+        user:
+          name: ansible
+          password: 123qwe
+          shell: /sbin/nologin
+          create_home: false
+          state: present
+
       - name: upload ssh keys
         authorized_key:
-          user: supervisor
+          user: ansible
           state: present
-          key: "{{ lookup('file', '/home/supervisor/.ssh/id_rsa.pub') }}"
-          
-          
+          key: "{{ lookup('file', '/home/ansible/.ssh/id_rsa.pub') }}"
+
+      - name: change sudoers
+        lineinfile:
+          path: /etc/sudoers.d/ansible
+          line: 'ansible ALL=(ALL:ALL) NOPASSWD:ALL'
+          state: present
