@@ -1,0 +1,12 @@
+---
+
+  - name: prepare systems
+    hosts: all
+    
+    tasks:
+      
+      - name: get ssh.pub key
+        authorized_key:
+        user: supervisor
+        state: present
+        key: "{{ lookup('file', '/home/supervisor/.ssh/id_rsa.pub') }}"
