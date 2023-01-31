@@ -1,7 +1,7 @@
 ---
   - name: Preparing
     hosts: all
-    #become: yes
+    become: yes
 
     tasks:
           
