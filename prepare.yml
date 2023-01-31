@@ -1,9 +1,9 @@
 ---
   - name: Preparing
     hosts: all
-    become: yes
-    become_method: sudo
-    become_user: supervisor
+    #become: yes
+    #become_method: sudo
+    #become_user: supervisor
 
     tasks:
           
