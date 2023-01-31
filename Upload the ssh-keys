@@ -1,0 +1,8 @@
+---
+
+  - name: SSH key-change
+    hosts: localhost
+
+    tasks:
+
+      - name: 
