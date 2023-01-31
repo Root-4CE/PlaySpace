@@ -11,4 +11,4 @@
         authorized_key:
           user: supervisor
           state: present
-          key: "{{ lookup('file', 'supervisor@192.168.17.3:/home/lnxcfg/.ssh/id_rsa.pub') }}"
+          key: "{{ lookup('file', 'supervisor@192.168.17.3:~/.ssh/id_rsa.pub') }}"
