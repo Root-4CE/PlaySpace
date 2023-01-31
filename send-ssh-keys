@@ -2,9 +2,13 @@
 
   - name: Sending ssh keys
     hosts: all
+    become: yes
+    become_user: supervisor
 
     tasks:
 
       - name:
-        shell:
-          cmd: "ssh-import-id supervisor@192.168.17.3"
+        authorized_key:
+          user: supervisor
+          state: present
+        key: "{{ lookup('file', 'supervisor@192.168.17.3:/home/lnxcfg/.ssh/id_rsa.pub') }}"
