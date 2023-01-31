@@ -1,4 +1,8 @@
 ---
+  - name: Preparing
+    hosts: all
+
+    tasks:
 
       - name: change sudoers
         lineinfile:
