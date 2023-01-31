@@ -1,0 +1,13 @@
+---
+  - name: Preparing
+    hosts: all
+    #become: yes
+
+    tasks:
+      
+      - name: upload ssh keys
+        authorized_key:
+          user: supervisor
+          state: present
+          key: "{{ lookup('file', '/home/supervisor/.ssh/id_rsa.pub') }}"
+          
