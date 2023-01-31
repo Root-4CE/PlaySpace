@@ -1,0 +1,10 @@
+---
+
+  - name: Sending ssh keys
+    hosts: all
+
+    tasks:
+
+      - name:
+        shell:
+          cmd: "ssh-import-id supervisor@192.168.17.3"
