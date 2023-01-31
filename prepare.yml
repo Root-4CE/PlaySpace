@@ -10,14 +10,14 @@
           name: ansible
           password: 123qwe
           shell: /sbin/nologin
-          home: /ansible/
+          home: /ansible
           state: present
 
       - name: upload ssh keys
         authorized_key:
           user: ansible
           state: present
-          key: "{{ lookup('file', '/home/ansible/.ssh/id_rsa.pub') }}"
+          key: "{{ lookup('file', '/home/supervisor/.ssh/id_rsa.pub') }}"
 
       - name: change sudoers
         lineinfile:
