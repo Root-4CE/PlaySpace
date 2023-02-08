@@ -2,7 +2,7 @@
 
   - name: DHCP server
     hosts: localhost
-    bacome: true
+    become: true
 
     tasks:
 
