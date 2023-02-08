@@ -23,7 +23,7 @@
 
       - name: config main conf file
         template:
-          src: /PlaySpace/dhcp/temp_dhcp_cfg
+          src: /home/osboxes/PlaySpace/dhcp/temp_dhcp_cfg
           dest: /etc/dhcp/dhcpd.conf
           backup: true
       
