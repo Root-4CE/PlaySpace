@@ -1,0 +1,33 @@
+---
+
+  - name: DHCP server
+    hosts: localhost
+    bacome: true
+
+    tasks:
+
+      - name: Update packages
+        apt:
+          state: latest
+      
+      - name: install DHCP server
+        apt:
+          name: isc-dhcp-server
+          state: latest
+      
+      - name: config listen iface
+        lineinfile:
+          path: /etc/default/isc-dhcp-server
+          regexp: '^INTERFACESv4=""'
+          line: 'INTERFACESv4="enp1s8"'
+
+      - name: config main conf file
+        template:
+          src: /PlaySpace/dhcp/temp+dhcp_cfg
+          dest: /etc/dhcp/dhcpd.conf
+          backup: true
+      
+      - name: restart dhcp service
+        service:
+          name: isc-dhcp-server
+          state: restarted
