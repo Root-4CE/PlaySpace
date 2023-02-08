@@ -19,7 +19,7 @@
         lineinfile:
           path: /etc/default/isc-dhcp-server
           regexp: '^INTERFACESv4=""'
-          line: 'INTERFACESv4="enp1s8"'
+          line: 'INTERFACESv4="enp0s8"'
 
       - name: config main conf file
         template:
