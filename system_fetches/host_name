@@ -1,0 +1,10 @@
+---
+  - name: hostname_change
+    hosts: all
+    become: yes
+
+    tasks:
+
+      - name: check name machine
+        debug:
+          msg: {{ ansible_nodename }}
