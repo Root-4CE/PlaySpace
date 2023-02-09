@@ -21,11 +21,11 @@
           regexp: '^INTERFACESv4=""'
           line: 'INTERFACESv4="enp0s9"'
 
-      # - name: config main conf file
-      #   template:
-      #     src: /home/osboxes/PlaySpace/dhcp/temp_dhcp_cfg
-      #     dest: /etc/dhcp/dhcpd.conf
-      #     backup: true
+      - name: config main conf file
+        template:
+          src: /home/osboxes/PlaySpace/dhcp/temp_dhcp_cfg
+          dest: /etc/dhcp/dhcpd.conf
+          backup: true
       
       - name: restart dhcp service
         service:
