@@ -3,7 +3,7 @@ authoritative;
 
 ### default LAN
 subnet 192.168.56.0 netmask 255.255.255.0 {
- range 192.168.56.1 192.168.56.10;
+ range 192.168.56.3 192.168.56.10;
  #option subnet-mask 255.255.255.0;
  #option broadcast-address 192.168.38.255;
  #option domain-name-servers 8.8.8.8, 8.8.4.4;
