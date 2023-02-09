@@ -7,4 +7,4 @@
 
       - name: check name machine
         debug:
-          var: ansible_nodename 
+          msg: '{{ ansible_nodename }}' 
